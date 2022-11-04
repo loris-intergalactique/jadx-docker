@@ -15,7 +15,7 @@ RUN set -eux; \
         rm jadx.zip; \
         apk del --no-network .deps; \
         \
-        jadx --version
+        bin/jadx --version
 
 ENV PATH="${PATH}:/opt/jadx/bin:/opt/jadx/lib"
 WORKDIR /data
