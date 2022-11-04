@@ -6,11 +6,11 @@ This project suggests a Dockerfile for the jadx project:
 ## How to use this Dockerfile?
 
 ```bash
-sudo docker build https://github.com/loris-intergalactique/jadx-docker.git#main
+docker build -t jadx:latest https://github.com/loris-intergalactique/jadx-docker.git#main
 ```
 
 ## How to use the image?
 
 ```bash
-sudo docker run -it -v $(pwd):/data jadx-docker jadx [options] <input files>
+docker run --rm -it -v "$(pwd):/data" jadx:latest jadx -d my-app-jadx-output -e -v my-app.apk
 ```
